@@ -1,6 +1,9 @@
 import datetime as dt
 import streamlit as st
 
+# https://docs.google.com/spreadsheets/d/1sOR0lH36AGFfhXqzDWCg70KkcxLyqmkZiZIMOFiN3D0/edit?usp=sharing
+
+
 project = ['Thena', 'Ramses', 'SolidLizard']
 first_flip = [dt.datetime(2023, 1, 12, 0, 0, 0, tzinfo=dt.timezone.utc), dt.datetime(2023, 3, 23, 0, 0, 0, tzinfo=dt.timezone.utc), dt.datetime(2023, 2, 2, 0, 0, 0, tzinfo=dt.timezone.utc)]
 
@@ -18,7 +21,7 @@ with col3:
    st.header("Time to epoch")
 
 for i in range(0,len(project)):
-    epoch = 0
+    epoch = 1
     next_epoch = first_flip[i]
     if next_epoch < dt.datetime.now().astimezone(dt.timezone.utc):
         while next_epoch < dt.datetime.now().astimezone(dt.timezone.utc):
